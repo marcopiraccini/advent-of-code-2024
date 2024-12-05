@@ -1,0 +1,15 @@
+{
+  "name": "advent-of-code-2024",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.16.0",
+    "neostandard": "^0.11.9"
+  }
+}

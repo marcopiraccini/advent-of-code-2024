@@ -59,7 +59,6 @@ const part2 = () => {
     }
   }
 
-  const resArr = []
   for (const wrong of wrongs) {
     const current = [...wrong]
     while (!isOk(current)) {
@@ -78,7 +77,6 @@ const part2 = () => {
       }
     }
     res += middle(current)
-    resArr.push(current)
   }
   console.log('part2:', res)
 }

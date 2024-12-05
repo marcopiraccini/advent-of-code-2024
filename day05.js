@@ -52,16 +52,11 @@ const part1 = () => {
 
 const part2 = () => {
   let res = 0
-  const wrongs = []
   for (const update of updates) {
-    if (!isOk(update)) {
-      wrongs.push(update)
-    }
-  }
-
-  for (const wrong of wrongs) {
-    const current = [...wrong]
+    let fixed = false
+    const current = [...update]
     while (!isOk(current)) {
+      fixed = true
       for (let i = current.length; i > 0; i--) {
         const el = current[i]
         if (rules[el]) {
@@ -76,7 +71,7 @@ const part2 = () => {
         }
       }
     }
-    res += middle(current)
+    res += fixed ? middle(current) : 0
   }
   console.log('part2:', res)
 }
